@@ -19,7 +19,7 @@ function buttonclick(){
     .then(response => response.json())
     .then(json => {
     var translatedOutput =json.contents.translated;
-    output.innertext= translatedOutput; //output
+    output.innerText= translatedOutput; //output
     
     }) 
     .catch(errorHandler)
