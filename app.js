@@ -17,13 +17,12 @@ function buttonclick(){
     //calling server to get translated value
     fetch(geturl(textinput))
     .then(response => response.json())
-    .then(json => console.log(json))
-    console.log("translation done"); 
-       /* var translatedOutput =json.contents.translated;
-        output.innertext= translatedOutput; //output
-        console.log("translation done"); 
+    .then(json => {
+    var translatedOutput =json.contents.translated;
+    output.innertext= translatedOutput; //output
+    
     }) 
-    .catch(errorHandler); */
+    .catch(errorHandler)
 };
 
 btnTranslate.addEventListener("click",buttonclick)
